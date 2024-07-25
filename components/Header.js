@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { NavItem } from "./navItem";
+import { NavItem } from "./NavItem";
 
 export function Header(){
     return (
