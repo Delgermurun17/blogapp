@@ -5,7 +5,8 @@ import { Trend } from "./Trend";
 export function Main(){
     return(
         <div>
-
+            <Hero />
+            <Blog />
         </div>
     )
 }
