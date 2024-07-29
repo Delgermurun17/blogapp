@@ -25,10 +25,10 @@ export default function Blog(){
                 {articles.map((item) => (
                     <div key={item.id} className="shadow-lg card bg-base-100">
                         <div className="card-body">
-                            <div className="badge badge-primary">{item.tag_list[0]}</div>
                             <Link href={item.url} target="_blank">
                             <Image className="hover:scale-105 duration-500 rounded-md mb-2" alt="" src={item.social_image} width={500} height={500}/>
-                                {item.title}
+                            <button disabled className="bg-blue-50 text-blue-500 rounded-md px-[10px] py-1 w-fit hover:bg-blue-500 hover:text-blue-50 duration-300">{item.tag_list[0]}</button>
+                            <div>{item.title}</div>                            
                             </Link>
                             <div className="flex items-center space-x-20">
                                 <div className="flex items-center">

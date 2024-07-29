@@ -16,7 +16,7 @@ export function Trend(){
     }, []);
     return (
         <div>
-            
+            {item.tag_list[0]}
         </div>
     )
 }
