@@ -1,7 +1,10 @@
 import { Header } from "@/components/Header";
+import dayjs from "dayjs";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react"
+import 'dayjs/locale/mn'
+
 
 export default function Blog(){
 
@@ -34,7 +37,7 @@ export default function Blog(){
                                 <div className="flex items-center">
                                 <Image src={item.user.profile_image_90} width={36} height={36}/>
                                 <div>{item.user.name}</div></div>
-                                <div>{item.published_at}</div>
+                                <div>{dayjs(item.published_at).locale("mn").format("MMMM D, YYYY")}</div>
                             </div>
                         </div>
                     </div>

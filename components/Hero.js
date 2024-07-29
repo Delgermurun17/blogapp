@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import dayjs from "dayjs";
+import 'dayjs/locale/mn'
 
 export function Hero(){
     const [articles, setArticles] = useState([]);
@@ -26,7 +28,7 @@ export function Hero(){
                                 <button disabled className="bg-blue-50 text-blue-500 rounded-md px-[10px] py-1 w-fit hover:bg-blue-500 hover:text-blue-50 duration-300 ">{item.tag_list[0]}</button>
                                 <div><Link className="hover:text-blue-600 duration-300" href={item.url} target="_blank">
                                 {item.title}</Link></div>
-                                    <div className="flex"><div>{item.published_at}</div></div>  
+                                    <div className="flex"><div>{dayjs(item.published_at).locale("mn").format("MMMM D, YYYY")}</div></div>  
                                 </div>
                             </div>
                 </div>

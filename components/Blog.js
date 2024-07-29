@@ -1,6 +1,9 @@
+import dayjs from "dayjs";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react"
+import 'dayjs/locale/mn'
+
 
 export default function Blog(){
 
@@ -30,7 +33,7 @@ export default function Blog(){
                         <div><Link className="hover:text-blue-600 duration-300" href={item.url} target="_blank">
                         {item.title}</Link></div>
                             <div className="flex">
-                                <div>{item.published_at}</div>
+                                <div>{dayjs(item.published_at).locale("mn").format("MMMM D, YYYY")}</div>
                             </div>
                         </div>
                     </div>
