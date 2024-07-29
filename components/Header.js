@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Header(){
     return (
-        <div className="flex justify-between items-center w-[1130px] m-auto">
+        <div className="flex justify-between items-center">
             <div>
                 <Link target="_self" href="/">
                 <div className="hidden md:block"><Image width={158} height={36} src={"logo.svg"}/></div>

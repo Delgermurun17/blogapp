@@ -1,3 +1,3 @@
 export function NavItem(props){
-    return <div className="">{props.nav}</div>
+    return <div className="hover:font-bold">{props.nav}</div>
 } 

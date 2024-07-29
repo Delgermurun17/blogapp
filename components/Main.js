@@ -6,6 +6,7 @@ export function Main(){
     return(
         <div>
             <Hero />
+            <Trend />
             <Blog />
         </div>
     )
