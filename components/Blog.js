@@ -33,7 +33,7 @@ export default function Blog(){
                         <div><Link className="hover:text-blue-600 duration-300" href={item.url} target="_blank">
                         {item.title}</Link></div>
                             <div className="flex">
-                                <div>{dayjs(item.published_at).locale("mn").format("MMMM D, YYYY")}</div>
+                                <div>{dayjs(item.published_at).locale("mn   ").format("MMMM D, YYYY")}</div>
                             </div>
                         </div>
                     </div>

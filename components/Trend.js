@@ -22,9 +22,9 @@ export function Trend() {
             <div className="flex justify-center mt-[30px]">
                 <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-8">
                     {limitedArticles.map((item) => (
-                        <div key={item.id} className="shadow-lg card bg-base-100">
+                        <div key={item.id} className="shadow-lg card bg-base-100 hover:scale-105 duration-500">
                             <Image
-                                className="relative h-[298px] object-cover rounded-xl"
+                                className="relative h-[320px] object-cover rounded-xl"
                                 src={item.social_image}
                                 width={289}
                                 height={320}
