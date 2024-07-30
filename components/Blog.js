@@ -8,16 +8,23 @@ import 'dayjs/locale/mn'
 export default function Blog(){
 
     const [articles, setArticles] = useState([]);
+    const [page, setPage] = useState(1);
 
     useEffect(() => {
-        fetch("https://dev.to/api/articles?username=paul_freeman")
+        loadMore();
+    }, []);
+
+    function loadMore(){
+        fetch(`https://dev.to/api/articles?username=paul_freeman&page=${page}&per_page=9`)
         .then((response) => {
             return response.json();
         })
         .then((data) => {
-            setArticles(data);
+            const newArticles = articles.concat(data)
+            setArticles(newArticles);
+            setPage(page + 1)
         })
-    }, []);
+    }
 
     return (<div className="w-max-[1216px] mx-auto mt-32">
                 <div className="text-2xl font-bold">All Blog Post</div>
@@ -39,6 +46,7 @@ export default function Blog(){
                     </div>
                 ))}
             </div>
+            <div className="flex justify-center py-10"><button onClick={loadMore} className="rounded-md border border-gray-400 text-gray-400 p-[12px_20px] bg-gray-100 flex hover:bg-gray-200 duration-200">Load More</button></div>
         </div>
     </div>
     )
