@@ -26,7 +26,7 @@ export function Footer(){
                         <div className="flex flex-col justify-between">
                         <Link target="_self" href="/"><Footeritem fItem="Home"/></Link>
                         <Link href={"blog"}><Footeritem fItem="Blog"/></Link>
-                        <Link href={"blog"}><Footeritem fItem="Contact"/></Link>
+                        <Link href={"contact"}><Footeritem fItem="Contact"/></Link>
                         </div>
                     </div>
                     <div className="w-36 flex justify-between text-[#6D6E76]">

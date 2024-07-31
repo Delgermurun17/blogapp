@@ -33,7 +33,7 @@ export function Header(){
                 <NavItem nav="Home"/>
             </Link>
                 <Link href={"blog"}> <NavItem nav="Blog"/></Link>
-                <Link href={"blog"}><NavItem nav="Contact"/></Link>
+                <Link href={"contact"}><NavItem nav="Contact"/></Link>
             </div>
             </div>
             <div className="hidden md:block">
