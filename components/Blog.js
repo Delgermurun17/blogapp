@@ -4,25 +4,30 @@ import Link from "next/link";
 import { useEffect, useState } from "react"
 import 'dayjs/locale/mn'
 
+const pageSize = 9
 
 export default function Blog(){
 
     const [articles, setArticles] = useState([]);
     const [page, setPage] = useState(1);
+    const [ended, setEnded] = useState(false);
 
     useEffect(() => {
         loadMore();
     }, []);
 
     function loadMore(){
-        fetch(`https://dev.to/api/articles?username=paul_freeman&page=${page}&per_page=9`)
+        fetch(`https://dev.to/api/articles?username=paul_freeman&page=${page}&per_page=${pageSize}`)
         .then((response) => {
             return response.json();
         })
-        .then((data) => {
-            const newArticles = articles.concat(data)
-            setArticles(newArticles);
+        .then((newArticles) => {
+            const updateArticles = articles.concat(newArticles)
+            setArticles(updateArticles);
             setPage(page + 1)
+            if(newArticles.length < pageSize){
+                setEnded(true)
+            }
         })
     }
 
@@ -40,13 +45,17 @@ export default function Blog(){
                         <div><Link className="hover:text-blue-600 duration-300" href={item.url} target="_blank">
                         {item.title}</Link></div>
                             <div className="flex">
-                                <div>{dayjs(item.published_at).locale("mn   ").format("MMMM D, YYYY")}</div>
+                                <div>{dayjs(item.published_at).locale("mn").format("MMMM D, YYYY")}</div>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
-            <div className="flex justify-center py-10"><button onClick={loadMore} className="rounded-md border border-gray-400 text-gray-400 p-[12px_20px] bg-gray-100 flex hover:bg-gray-200 duration-200">Load More</button></div>
+            {!ended && (
+            <div className="flex justify-center py-10">
+                <button onClick={loadMore} className="rounded-md border border-gray-400 text-gray-400 p-[12px_20px] bg-gray-100 flex hover:bg-gray-200 duration-200">Load More</button>
+            </div>
+            )}
         </div>
     </div>
     )

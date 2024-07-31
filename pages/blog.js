@@ -5,25 +5,30 @@ import Link from "next/link";
 import { useEffect, useState } from "react"
 import 'dayjs/locale/mn'
 
+const pageSize = 12
 
 export default function Blog(){
 
     const [articles, setArticles] = useState([]);
     const [page, setPage] = useState(1);
+    const [ended, setEnded] = useState(false);
 
     useEffect(() => {
         loadMore();
     }, []);
 
     function loadMore(){
-        fetch(`https://dev.to/api/articles?username=paul_freeman&page=${page}&per_page=12`)
+        fetch(`https://dev.to/api/articles?username=paul_freeman&page=${page}&per_page=${pageSize}`)
         .then((response) => {
             return response.json();
         })
-        .then((data) => {
-            const newArticles = articles.concat(data)
-            setArticles(newArticles);
+        .then((newArticles) => {
+            const updateArticles = articles.concat(newArticles)
+            setArticles(updateArticles);
             setPage(page + 1)
+            if(newArticles.length < pageSize){
+                setEnded(true)
+            }
         })
     }
 
@@ -51,7 +56,11 @@ export default function Blog(){
                 ))}
             </div>
         </div>
-        <div className="flex justify-center py-10"><button onClick={loadMore} className="rounded-md border border-gray-400 text-gray-400 p-[12px_20px] bg-white flex hover:bg-gray-100 duration-200">Load More</button></div>
-    </div>
+        {!ended && (
+            <div className="flex justify-center py-10">
+                <button onClick={loadMore} className="rounded-md border border-gray-400 text-gray-400 p-[12px_20px] bg-gray-100 flex hover:bg-gray-200 duration-200">Load More</button>
+            </div>
+        )}
+        </div>
     )
 }
