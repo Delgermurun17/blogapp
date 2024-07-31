@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 
 export default function contact(){
     return (
-        <div>
+        <div className="flex flex-col gap-[100px]">
             <Header />
             <div className="w-[628px] mx-auto">
                 <div>Contact Us</div>
