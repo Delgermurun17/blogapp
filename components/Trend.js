@@ -17,10 +17,11 @@ export function Trend() {
 
 
     return (
-        <div className="max-w-[1280px] mt-16 mx-auto">
+        <div>
+        <div className="max-w-[1230px] mt-16 mx-auto">
             <div className="text-2xl font-bold">Trending</div>
-            <div className="flex justify-center mt-[30px]">
-                <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-8">
+            <div className="flex justify-between mt-[30px]">
+                <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     {limitedArticles.map((item) => (
                         <div key={item.id} className="shadow-lg card bg-base-100 hover:scale-105 duration-500">
                             <Image
@@ -51,6 +52,6 @@ export function Trend() {
                     ))}
                 </div>
             </div>
-        </div>
+        </div></div>
     );
 }

@@ -4,7 +4,7 @@ import { Trend } from "./Trend";
 
 export function Main(){
     return(
-        <div>
+        <div className="flex flex-col gap-[100px]">
             <Hero />
             <Trend />
             <Blog />

@@ -31,11 +31,13 @@ export default function Blog(){
         })
     }
 
-    return (<div className="w-max-[1216px] mx-auto mt-32">
+    return (
+    <div>
+    <div className="max-w-[1216px] mx-auto">
                 <div className="text-2xl font-bold">All Blog Post</div>
 
         <div className="container mx-auto">
-            <div className="grid gap-4 grid-cols-1 lg:grid-cols-3 md:grid-cols-2 mx-8">
+            <div className="grid gap-4 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
                 {articles.map((item) => (
                     <div key={item.id} className="shadow-lg card bg-base-100">
                         <div className="card-body">
@@ -53,10 +55,10 @@ export default function Blog(){
             </div>
             {!ended && (
             <div className="flex justify-center py-10">
-                <button onClick={loadMore} className="rounded-md border border-gray-400 text-gray-400 p-[12px_20px] bg-gray-100 flex hover:bg-gray-200 duration-200">Load More</button>
+                <button onClick={loadMore} className="rounded-md border border-gray-500 text-gray-500 p-[12px_20px] bg-white flex hover:bg-gray-100 duration-200">Load More</button>
             </div>
             )}
         </div>
-    </div>
+    </div></div>
     )
 }

@@ -19,7 +19,8 @@ export function Header(){
     }
 
     return (
-        <div className="flex justify-between items-center">
+    <div className="h-[100px] flex items-center">
+        <div className="flex justify-between items-center w-[1130px] m-auto">
             <div>
                 <Link target="_self" href="/">
                 <div className="hidden md:block"><Image width={158} height={36} src={"logo.svg"}/></div>
@@ -27,12 +28,12 @@ export function Header(){
                 </Link>
             </div>
             <div className="hidden md:block">
-            <div className="flex space-x-3">
+            <div className="flex gap-3">
             <Link target="_self" href="/">
                 <NavItem nav="Home"/>
             </Link>
                 <Link href={"blog"}> <NavItem nav="Blog"/></Link>
-                <Link href={"contact"}><NavItem nav="Contact"/></Link>
+                <Link href={"blog"}><NavItem nav="Contact"/></Link>
             </div>
             </div>
             <div className="hidden md:block">
@@ -61,5 +62,6 @@ export function Header(){
         </div>
       </div>
         </div>
+    </div>
     )
 }
