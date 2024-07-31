@@ -5,6 +5,7 @@ export default function contact(){
     return (
         <div className="flex flex-col gap-[100px]">
             <Header />
+            <div>
             <div className="w-[628px] mx-auto">
                 <div>Contact Us</div>
                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div>
@@ -32,7 +33,7 @@ export default function contact(){
                         <button className="p-[10px_16px] bg-[#4B6BFB] rounded-md font-medium text-sm font-sans text-white mt-[9px]">Send Message</button>
                     </div>
                 </div>
-            </div>
+            </div></div>
             <Footer />
         </div>
     )
