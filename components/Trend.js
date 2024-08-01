@@ -17,10 +17,10 @@ export function Trend() {
 
 
     return (
-        <div>
-        <div className="max-w-[1230px] mt-16 mx-auto">
-            <div className="text-2xl font-bold">Trending</div>
-            <div className="flex justify-between mt-[30px]">
+        <div className="mx-8">
+        <div className="container mt-16 mx-auto">
+            <div className="text-2xl font-bold max-w-[1230px] mx-auto">Trending</div>
+            <div className="flex justify-center mt-[30px]">
                 <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     {limitedArticles.map((item) => (
                         <div key={item.id} className="shadow-lg card bg-base-100 hover:scale-105 duration-500">

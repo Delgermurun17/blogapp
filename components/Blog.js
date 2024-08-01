@@ -32,11 +32,11 @@ export default function Blog(){
     }
 
     return (
-    <div>
-    <div className="max-w-[1216px] mx-auto">
-                <div className="text-2xl font-bold">All Blog Post</div>
+    <div className="mx-8">
+    <div className="container mx-auto">
+                <div className="text-2xl font-bold max-w-[1230px] mx-auto">All Blog Post</div>
 
-        <div className="container mx-auto">
+        <div className="max-w-[1216px] mx-auto">
             <div className="grid gap-4 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
                 {articles.map((item) => (
                     <div key={item.id} className="shadow-lg card bg-base-100">

@@ -10,7 +10,7 @@ import "@fontsource/plus-jakarta-sans"
 export function Footer(){
     return (
         <div className="h-[490px] border border-t-[#E8E8EA] bg-[#F6F6F7] flex items-center font-jakarta">
-            <div className="md:w-[1216px] w-full mx-auto flex flex-col gap-[25px]">
+            <div className="container mx-auto flex flex-col gap-[25px]">
                 <div className="flex gap-5 h-60">
                     <div className="w-[289px] flex flex-col gap-6">
                         <div className="flex flex-col gap-3">

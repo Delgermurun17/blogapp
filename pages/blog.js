@@ -35,10 +35,10 @@ export default function Blog(){
 
     return (<div className="">
         <Header />
-        <div className="flex flex-col gap-10 w-[1216px] mx-auto">
-        <div className="text-2xl font-bold">All Blog Post</div>
-        <div className="container mx-auto">
-            <div className="grid gap-4 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
+        <div className="flex flex-col gap-10 container mx-auto">
+        <div className="text-2xl font-bold mx-8">All Blog Post</div>
+        <div className="flex flex-col items-center max-w-[1216px] mx-8">
+        <div className="grid gap-4 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
                 {articles.map((item) => (
                     <div key={item.id} className="shadow-lg card bg-base-100">
                         <div className="card-body">

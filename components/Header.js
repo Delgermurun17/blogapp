@@ -19,9 +19,9 @@ export function Header(){
     }
 
     return (
-    <div className="h-[100px] flex items-center">
-        <div className="flex justify-between items-center w-[1130px] m-auto">
-            <div>
+    <div className="">
+        <div className="h-[100px] flex items-center mx-8">
+            <div className="flex justify-between items-center container m-auto"><div>
                 <Link target="_self" href="/">
                 <div className="hidden md:block"><Image width={158} height={36} src={"logo.svg"}/></div>
                 <div className="md:hidden"><Image width={135} height={26} src={"logo.svg"}/></div>
@@ -60,6 +60,7 @@ export function Header(){
           </div>
         </div>
         </div>
+      </div>
       </div>
         </div>
     </div>
