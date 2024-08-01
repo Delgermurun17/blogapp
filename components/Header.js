@@ -5,6 +5,8 @@ import { Menubar } from "./Menubar";
 import { IoClose } from "react-icons/io5";
 import { LuMenu } from "react-icons/lu";
 import { useState } from "react";
+import { GrSearch } from "react-icons/gr";
+
 
 export function Header(){
 
@@ -36,8 +38,11 @@ export function Header(){
                 <Link href={"contact"}><NavItem nav="Contact"/></Link>
             </div>
             </div>
-            <div className="hidden md:block">
-                <input type="text" className="outline-none text-base-content bg-base-200 w-28 placeholder:font-work" placeholder="Search"/>
+            <div className="hidden md:block w-[166px] h-9">
+              <div className="bg-[#F4F4F5] p-[8px_8px_8px_16px] rounded-[5px] flex items-center gap-3">
+                <div className=""><input type="text " className="outline-none text-sm font-normal bg-[#F4F4F5] w-[114px] placeholder:font-work" placeholder="Search"/></div>
+                <div className="size-4"><GrSearch /></div>
+              </div>
             </div>
             <div className="md:hidden size-9 flex justify-center items-center"><LuMenu onClick={openMenu} className="size-6"/>
         <div className={open ? "block" : "hidden"}>
