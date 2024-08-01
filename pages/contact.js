@@ -27,7 +27,7 @@ export default function contact(){
                         <input type="text" className="outline-none text-base-content rounded-[5px] p-[5.5px_20px_5.5px_18px] border border-gray-400 w-full" placeholder="Subject"/>
                     </div>
                     <div>
-                        <input type="text"  className="outline-none text-base-content rounded-[5px] p-[14px_20px_8px_18px] border border-gray-400 w-full h-[134px]" placeholder="Write a message"/>
+                        <textarea  className="p-[14px_20px_8px_18px] rounded-[5px] border border-gray-400 w-full h-[134px] bg-white outline-none resize-none" placeholder="Write a message"/>
                     </div>
                     <div>
                         <button className="p-[10px_16px] bg-[#4B6BFB] rounded-md font-medium text-sm font-sans text-white mt-[9px]">Send Message</button>
