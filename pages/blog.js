@@ -35,9 +35,10 @@ export default function Blog(){
 
     return (<div className="">
         <Header />
-        <div className="flex flex-col gap-10 container mx-auto">
-        <div className="text-2xl font-bold mx-8">All Blog Post</div>
-        <div className="flex flex-col items-center max-w-[1216px] mx-8">
+        <div className="mx-8">
+        <div className="flex flex-col mx-auto gap-10 container">
+        <div className="text-2xl font-bold"><div className="max-w-[1216px] mx-auto">All Blog Post</div></div>
+        <div className="flex flex-col items-center max-w-[1216px] mx-auto">
         <div className="grid gap-4 grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
                 {articles.map((item) => (
                     <div key={item.id} className="shadow-lg card bg-base-100">
@@ -62,7 +63,7 @@ export default function Blog(){
             <div className="flex justify-center py-10">
                 <button onClick={loadMore} className="rounded-md border border-gray-500 text-gray-500 p-[12px_20px] bg-white flex hover:bg-gray-100 duration-200">Load More</button>
             </div>
-        )}</div>
+        )}</div></div>
         <div className="mt-20"><Footer /></div>
         </div>
     )
