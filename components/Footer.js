@@ -37,8 +37,8 @@ export function Footer(){
         </div></div>
         <div className="hidden md:block">
         <div className="h-[490px] border border-t-[#E8E8EA] bg-[#F6F6F7] flex items-center font-jakarta">
-            <div className="md:w-[1216px] w-full mx-auto flex flex-col gap-[25px]">
-                <div className="flex gap-5 h-60">
+            <div className="md:w-[1216px] w-full mx-auto flex flex-col gap-[25px] px-8">
+                <div className="flex gap-5 h-60 justify-between">
                     <div className="w-[289px] flex flex-col gap-6">
                         <div className="flex flex-col gap-3">
                             <div className="">About</div>
@@ -49,7 +49,7 @@ export function Footer(){
                             <Footeritem fItem="Phone : 880 123 456 789"/>
                         </div>
                     </div>
-                    <div className="w-[521px] h-[88px] flex justify-center">
+                    <div className="h-[88px] flex justify-center">
                         <div className="flex flex-col justify-between">
                         <Link target="_self" href="/"><Footeritem fItem="Home"/></Link>
                         <Link href={"blog"}><Footeritem fItem="Blog"/></Link>
