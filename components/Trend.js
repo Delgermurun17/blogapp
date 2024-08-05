@@ -41,8 +41,7 @@ export function Trend() {
                                 <div>
                                     <Link
                                         className="hover:text-blue-600 duration-300 text-white"
-                                        href={item.url}
-                                        target="_blank"
+                                        href={item.path}
                                     >
                                         {item.title}
                                     </Link>

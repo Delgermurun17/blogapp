@@ -25,8 +25,8 @@ export function Header(){
         <div className="h-[100px] flex items-center max-w-[1230px] m-auto">
             <div className="flex justify-between items-center container m-auto"><div>
                 <Link target="_self" href="/">
-                <div className="hidden md:block"><Image width={158} height={36} src={"logo.svg"}/></div>
-                <div className="md:hidden"><Image width={135} height={26} src={"logo.svg"}/></div>
+                <div className="hidden md:block"><Image width={158} height={36} src={"/logo.svg"}/></div>
+                <div className="md:hidden"><Image width={135} height={26} src={"/logo.svg"}/></div>
                 </Link>
             </div>
             <div className="hidden md:block">
@@ -34,8 +34,8 @@ export function Header(){
             <Link target="_self" href="/">
                 <NavItem nav="Home"/>
             </Link>
-                <Link href={"blog"}> <NavItem nav="Blog"/></Link>
-                <Link href={"contact"}><NavItem nav="Contact"/></Link>
+                <Link href={"/blog"}> <NavItem nav="Blog"/></Link>
+                <Link href={"/contact"}><NavItem nav="Contact"/></Link>
             </div>
             </div>
             <div className="hidden md:block w-[166px] h-9">
@@ -58,8 +58,8 @@ export function Header(){
             <div>
               <div className="border-y dark:border-gray-800 border-gray-100">
               <Link target="_self" href="/"><div className="ml-4 my-4"><Menubar menuItem="Home"/></div></Link>
-              <Link href={"blog"}><div className="ml-4 mb-4"><Menubar menuItem="Blog"/></div></Link>
-              <Link href={"contact"}><div className="ml-4 "><Menubar menuItem="Contact"/></div></Link>
+              <Link href={"/blog"}><div className="ml-4 mb-4"><Menubar menuItem="Blog"/></div></Link>
+              <Link href={"/contact"}><div className="ml-4 "><Menubar menuItem="Contact"/></div></Link>
               </div>
             </div>
           </div>
