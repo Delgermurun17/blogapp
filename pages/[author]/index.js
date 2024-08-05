@@ -1,3 +1,8 @@
+import { Errorpage } from "@/components/Errorpage";
+
+
 export default function Page(){
-    return <div>Page</div>
+    return <div>
+        <Errorpage />
+    </div>
 }
