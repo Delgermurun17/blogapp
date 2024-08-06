@@ -25,7 +25,6 @@ export default async function Page({ params }){
             <div>{article.title}</div>
             <div className="prose">{parse(article.body_html)}</div>
         </div>
-        <Footer />
     </main>
     );
 }
