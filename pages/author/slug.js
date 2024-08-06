@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer"
 import { Header } from "@/components/Header"
 import parse  from "html-react-parser"
+import Link from "next/link"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 

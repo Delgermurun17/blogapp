@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="dark:bg-gray-800 bg-white font-sans flex flex-col gap-[69px]">
 
-      <div className="flex flex-col gap-[100px]">
+      <div className="flex flex-col md:gap-[100px] gap-[30px]">
       <Header />
       <Main />
       </div>

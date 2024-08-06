@@ -14,11 +14,11 @@ export function Trend() {
     }, []);
 
     const limitedArticles = articles.slice(0, 4);
-
+    
 
     return (
         <div className="mx-8">
-        <div className="container mt-16 mx-auto">
+        <div className="container md:mt-16 mt-0 mx-auto">
             <div className="text-2xl font-bold max-w-[1230px] mx-auto">Trending</div>
             <div className="flex justify-center mt-[30px]">
                 <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
