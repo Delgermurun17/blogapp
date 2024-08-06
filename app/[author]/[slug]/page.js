@@ -1,6 +1,6 @@
 import parse  from "html-react-parser"
 
-export async function generateMetaData({ params }){
+export async function generateMetadata({ params }){
     const response = await fetch(`https://dev.to/api/articles/${params.author}/${params.slug}`)
     const article = await response.json( )
 
