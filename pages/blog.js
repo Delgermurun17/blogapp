@@ -19,7 +19,7 @@ export default function Blog(){
     }, []);
 
     function loadMore(){
-        fetch(`https://dev.to/api/articles?username=paul_freeman&page=${page}&per_page=${pageSize}`)
+        fetch(`https://dev.to/api/articles?&page=${page}&per_page=${pageSize}`)
         .then((response) => {
             return response.json();
         })
@@ -48,11 +48,11 @@ export default function Blog(){
                             <button disabled className="bg-blue-50 text-blue-500 rounded-md px-[10px] py-1 w-fit hover:bg-blue-500 hover:text-blue-50 duration-300">{item.tag_list[0]}</button>
                             <div><Link className="hover:text-blue-600 duration-300" href={item.path}>
                             {item.title}</Link></div>
-                            <div className="flex items-center space-x-20">
-                                <div className="flex items-center">
-                                <Image src={item.user.profile_image_90} width={36} height={36}/>
-                                <div>{item.user.name}</div></div>
-                                <div>{dayjs(item.published_at).locale("mn").format("MMMM D, YYYY")}</div>
+                            <div className="flex gap-5 items-center">
+                                <div className="flex gap-3 items-center">
+                                <Image className="rounded-[28px] size-9" src={item.user.profile_image_90} width={36} height={36}/>
+                                <div className="flex items-center font-medium text-base text-[#97989f]">{item.user.name}</div></div>
+                                <div className="font-normal text-base text-[#97989f]">{dayjs(item.published_at).locale("mn").format("MMMM D, YYYY")}</div>
                             </div>
                         </div>
                     </div>

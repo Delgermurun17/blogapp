@@ -30,7 +30,7 @@ export default function Blog() {
         setLoading(true);
 
         try {
-            const response = await fetch(`https://dev.to/api/articles?username=paul_freeman&page=${page}&per_page=${pageSize}${selectedTag !== "all" ? `&tag=${selectedTag}` : ''}`);
+            const response = await fetch(`https://dev.to/api/articles?page=${page}&per_page=${pageSize}${selectedTag !== "all" ? `&tag=${selectedTag}` : ''}`);
             const newArticles = await response.json();
             
             if (!response.ok) {
@@ -89,7 +89,7 @@ export default function Blog() {
                                         <div>{item.tag_list[0]}</div>
                                     </button>
                                     <div>
-                                        <Link className="hover:text-blue-600 duration-300" href={item.url}>
+                                        <Link className="hover:text-blue-600 duration-300" href={item.path}>
                                             {item.title}
                                         </Link>
                                     </div>

@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import { NavItem } from "./NavItem";
 import Link from "next/link";
