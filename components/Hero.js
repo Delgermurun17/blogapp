@@ -8,7 +8,7 @@ export function Hero(){
     const [articles, setArticles] = useState([]);
 
     useEffect(() => {
-        fetch("https://dev.to/api/articles?username=delgermurun17")
+        fetch("https://dev.to/api/articles?username=paul_freeman&per_page=1")
         .then((response) => {
             return response.json();
         })

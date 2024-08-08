@@ -42,7 +42,7 @@ export function Header(){
             </div>
             <div className="hidden md:block w-[166px] h-9">
               <div className="bg-[#F4F4F5] p-[8px_8px_8px_16px] rounded-[5px] flex items-center gap-3">
-                <div className=""><input type="text " className="outline-none text-sm font-normal bg-[#F4F4F5] w-[114px] placeholder:font-work" placeholder="Search"/></div>
+                <form action="/search" className=""><input type="search" name="q" className="outline-none text-sm font-normal bg-[#F4F4F5] w-[114px] placeholder:font-work" placeholder="Search"/></form>
                 <div className="size-4"><GrSearch /></div>
               </div>
             </div>
