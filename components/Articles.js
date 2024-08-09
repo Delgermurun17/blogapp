@@ -1,7 +1,3 @@
-export function Articles(){
-    return (
-        <div>
-            
-        </div>
-    )
+export function Articles() {
+  return <div></div>;
 }
